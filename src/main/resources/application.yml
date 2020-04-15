@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.arikok: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  file:
+    name: range-reverse-proxy
+
+zuul:
+  routes:
+    users:
+      path: /**
+      url: http://localhost:8080
+
+
+keycloak:
+  realm: realm-id
+  auth-server-url: http://keycloak-url
+  client-id: client-id
+  client-secret: client-secret
+  reissue-token-margin : 20

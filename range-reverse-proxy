@@ -1,0 +1,6 @@
+2020-04-14 12:33:59,655 INFO com.arikok.rangereverseproxy.RangeReverseProxyApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:34:01,096 WARN com.netflix.config.sources.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-04-14 12:34:01,097 INFO com.netflix.config.sources.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-14 12:34:01,103 WARN com.netflix.config.sources.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-04-14 12:34:01,103 INFO com.netflix.config.sources.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-14 12:34:02,506 INFO com.arikok.rangereverseproxy.RangeReverseProxyApplicationTests [main] Started RangeReverseProxyApplicationTests in 3.496 seconds (JVM running for 4.512)
