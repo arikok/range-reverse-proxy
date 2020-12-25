@@ -1,11 +1,13 @@
 server:
-  port: 8090
+  port: 8500
 
 
 logging:
   level:
-    org.springframework: ERROR
-    com.arikok: DEBUG
+    org:
+      springframework:
+        cloud:
+          netflix: trace
   pattern:
     console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
     file: "%d %p %c{1.} [%t] %m%n"
@@ -13,13 +15,20 @@ logging:
     name: range-reverse-proxy
 
 zuul:
+  sensitive-headers:
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
   routes:
-    users:
+    portal:
       path: /**
-      url: http://localhost:8080
-
+      url: http://localhost:8501
+    api:
+      path: /api/**
+      url: http://localhost:8502
 
 keycloak:
+  enabled : false
   realm: realm-id
   auth-server-url: http://keycloak-url
   client-id: client-id
